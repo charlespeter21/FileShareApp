@@ -16,6 +16,8 @@ namespace FileShareApp.Admin
 {
     public partial class ReportUpload : System.Web.UI.Page
     {
+        dbAccess objDbAccess = new dbAccess();
+        Report_Details objReports = new Report_Details();
         protected void Page_Load(object sender, EventArgs e)
         {
             CrystalReportViewer_UploadList.ToolPanelView = CrystalDecisions.Web.ToolPanelViewType.None;
@@ -26,16 +28,16 @@ namespace FileShareApp.Admin
             ConnectionInfo crConnectionInfo = new ConnectionInfo();
             // Tables CrTables;
 
-            crConnectionInfo.ServerName = "ANITHRAJ";
-            crConnectionInfo.DatabaseName = "FILESHARE";
-            crConnectionInfo.UserID = "sa";
-            crConnectionInfo.Password = "admin123";
+            crConnectionInfo.ServerName = objDbAccess.strServer;
+            crConnectionInfo.DatabaseName = objDbAccess.strDbName;
+            crConnectionInfo.UserID = objDbAccess.strUser;
+            crConnectionInfo.Password = objDbAccess.strPassword;
             UserList ds = new UserList(); // .xsd file name
             DataTable dt = new DataTable();
 
             // Just set the name of data table
             dt.TableName = "UploadHistory";
-            dt = getAllOrders(); //This function is located below this function
+            dt = objReports.GetUploadReports(); //This function is located below this function
 
             ds.Tables[0].Merge(dt);
 
@@ -55,40 +57,6 @@ namespace FileShareApp.Admin
             CrystalReportViewer_UploadList.ReportSource = rptDoc;
         }
 
-        public DataTable getAllOrders()
-        {
-
-            //Connection string replace 'databaseservername' with your db server name
-            string sqlCon = "User ID=sa;PWD=admin123; server=anithraj;INITIAL CATALOG=fileshare;" +
-                                "Integrated Security=True;Connect Timeout=0";
-
-
-            SqlConnection Con = new SqlConnection(sqlCon);
-            SqlCommand cmd = new SqlCommand();
-            DataSet ds = null;
-            SqlDataAdapter adapter;
-            try
-            {
-                Con.Open();
-                //Stored procedure calling. It is already in sample db.
-                cmd.CommandText = "sp_getuploadhistory";
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Connection = Con;
-                ds = new DataSet();
-                adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(ds, "UploadHistory");
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                cmd.Dispose();
-                if (Con.State != ConnectionState.Closed)
-                    Con.Close();
-            }
-            return ds.Tables[0];
-        }
+        
     }
 }
