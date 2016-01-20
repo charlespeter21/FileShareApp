@@ -17,7 +17,7 @@
                 <svg class="glyph stroked upload"><use xlink:href="#stroked-upload"/></svg>
                 New Uploads</a></li>
           
-            <li><a href="../Index.aspx">
+            <li><a href="Logout.aspx">
                 <svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
                 Logout</a></li>
         </ul>

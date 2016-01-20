@@ -21,7 +21,7 @@
                 New Uploads</a></li>
            <li class="active"><a href="ViewReports.aspx">
            <svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Reports</a></li>
-            <li><a href="../Index.aspx">
+            <li><a href="Logout.aspx">
                 <svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
                 Logout</a></li>
         </ul>

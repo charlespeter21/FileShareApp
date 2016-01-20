@@ -11,7 +11,17 @@ namespace FileShareApp.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CheckLogin();
+        }
+        private void CheckLogin()
+        {
+            string domain = Request.Url.Authority.ToString();
+            //BaseURL = "http://" + domain + "/";
+            //Load menu or Do Any database related work
+            if (Session["user"] == null)
+            {
+                Response.Redirect("../Index.aspx", false);
+            }
         }
     }
 }
