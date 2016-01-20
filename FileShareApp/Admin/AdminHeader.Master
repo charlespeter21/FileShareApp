@@ -65,7 +65,31 @@
 		<!-- JQuery thickbox plugin script -->
 		<script type="text/javascript" src="../css-admin/thickbox.js" tppabs="http://www.xooom.pl/work/magicadmin/js/thickbox.js"></script>
 
+        <script type="text/javascript">
+            $(document).ready(function () {
 
+                CheckingSeassion();
+            });
+            function CheckingSeassion() {
+                $.ajax({
+                    type: "POST",
+                    url: "Logout.aspx/LogoutCheck",
+                    data: "{}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+
+                        if (response.d == 0) {
+                            window.location = "../Index.aspx";
+                        }
+                    },
+                    failure: function (msg) {
+                        alert(msg);
+                    }
+                });
+            }
+
+    </script>
      
         
         <!-- Initiate WYIWYG text area -->
