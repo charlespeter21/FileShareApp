@@ -1,0 +1,68 @@
+Name: Piyush GARG
+Student ID: S3218012
+
+Name: Dibayendun N. Dey
+Student ID: S3224807
+
+Q1. Which Business Objects have I used?
+
+Ans1. We had used all the Business Objects that are required in the System.
+      Such as :
+	1. Bd --> Bed Business Object
+	2. Doctor --> Doctor Business Object
+	3. DoctorPatientVisit -->Patient Visits Business Object
+	4. Patient -->Patient Business Object
+	5. User -->User Business Object
+
+
+Q2. Why did I choose to create and choose them?
+
+Ans2. We chose to create the above Business Objects because to Seperate the logic from the Application and make the 	use of: 
+	1. Object Orientedness
+	2. Code Extensibility
+
+Q3. Explanation of my directory structure.
+
+Ans3. We had used the appropriate directory structures for the Application
+	1. AdminOperations
+	2. App_Themes
+	3. Booking Staff
+	4. Business Objects
+	5. DAL
+	6. Images
+	7. Presentation
+	8. User Controls
+	9. Error Handling
+
+      We had planned to chose these Directory structure in order to seperate the functionality and logic; in order 		to make the program making more sense to any other user.
+      Like:
+	1. In AdminOperations we had implemented all the Admin pages which only admin has the rights to do.
+	2. In App_Themes we had putten the seperate themes for Booking Staff and Admin to make the pages bit 				different.
+	3. In Booking Staff we had implemented all the pages that are required by Staff Operations.
+	4. In Business Objects we had implemented all the Business Objects that are required by the System, such as 		Doctor, Patient, User, Bed
+	5. In DAL we had implemented the Data Logic Layer for every Business Objects Operation with the DataBase.
+	6. In Images all the Images are contained.
+	7. In Presentation we have all the Basic web pages for the system.
+	8. In User Controls we had implemented all the User Controls or Custom Controls for the Web pages i.e. for 			Staff and Admin
+	9. In Error Handling we had implemented the Custome Error pages such as "Error 404"
+
+
+Q4. Have I designed a logout page?
+
+Ans4. No, i had not implemented the Logout Page, as i had implemeted that in User Control because Logout 		functionality is required in many pages and have the same functionality.
+
+Q5. How many C# coding guidelines have been adopted?
+
+Ans5. We had used all the maximum possible conventions that was applicable to our application.
+
+
+Q6. What AJAX Controls we had used?
+
+Ans6. We had used:
+	1. List Search Extender
+	2. WaterMark Extender
+	3. Tab Control
+	4. Drop Down Extender
+	5. Validation Extender
+	6. Text Filtering Extender
+
