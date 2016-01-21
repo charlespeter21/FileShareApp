@@ -18,6 +18,7 @@ namespace FileShareApp.Admin
     {
         dbAccess objDbAccess = new dbAccess();
         Report_Details objReports = new Report_Details();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             CrystalReportViewer_UploadList.ToolPanelView = CrystalDecisions.Web.ToolPanelViewType.None;

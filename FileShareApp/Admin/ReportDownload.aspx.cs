@@ -22,6 +22,7 @@ namespace FileShareApp.Admin
         {
             CrystalReportViewer_DownloadFiles.ToolPanelView = CrystalDecisions.Web.ToolPanelViewType.None;
 
+
             ReportDocument rptDoc = new ReportDocument();
             TableLogOnInfos crtableLogoninfos = new TableLogOnInfos();
             TableLogOnInfo crtableLogoninfo = new TableLogOnInfo();

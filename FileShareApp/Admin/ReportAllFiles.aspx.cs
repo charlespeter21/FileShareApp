@@ -28,6 +28,7 @@ namespace FileShareApp.Admin
             ConnectionInfo crConnectionInfo = new ConnectionInfo();
             // Tables CrTables;
 
+
             crConnectionInfo.ServerName =objDbAccess.strServer ;
             crConnectionInfo.DatabaseName = objDbAccess.strDbName;
             crConnectionInfo.UserID = objDbAccess.strUser;
