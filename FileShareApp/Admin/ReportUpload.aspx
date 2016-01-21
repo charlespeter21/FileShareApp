@@ -12,6 +12,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
+
         <CR:CrystalReportViewer ID="CrystalReportViewer_UploadList" runat="server" AutoDataBind="true"  BestFitPage="True"  HasCrystalLogo="False"
         DisplayStatusbar="true" HasSearchButton="True" HasRefreshButton="True"/>
     </div>

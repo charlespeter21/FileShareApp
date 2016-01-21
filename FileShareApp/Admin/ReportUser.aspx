@@ -13,6 +13,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
+
         <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true"  BestFitPage="True"  HasCrystalLogo="False"
         DisplayStatusbar="true" HasSearchButton="True" HasRefreshButton="True"  
         />
