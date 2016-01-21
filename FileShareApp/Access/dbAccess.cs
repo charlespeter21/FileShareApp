@@ -12,6 +12,7 @@ namespace FileShareApp.Access
          string strConnectionString = "";
         private bool handleErrors = false;
         private string strLastError = "";
+        public string strServer;
         public string strDbName;
         public string strUser;
         public string strPassword;
@@ -24,9 +25,14 @@ namespace FileShareApp.Access
             //strConnectionString = "Data source= .\\SQLEXPRESS;Initial Catalog=VAM_ART_INC;Integrated Security=true;";
             // strConnectionString = "Server=tcp:d19bobagxf.database.windows.net,1433;Database=VAM_ART_INC;User ID=vamsystems@d19bobagxf;Password=ABCabc123!$;Trusted_Connection=False;Encrypt=True;";
             SqlConnection cnn = new SqlConnection();
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(strConnectionString);
             cnn.ConnectionString = strConnectionString;
             cmd.Connection = cnn;
             cmd.CommandType = CommandType.StoredProcedure;
+            strServer = cnn.DataSource;
+            strDbName = cnn.Database;
+            strUser = builder.UserID;
+            strPassword = builder.Password;
         }
         public IDataReader ExecuteReader()
         {
