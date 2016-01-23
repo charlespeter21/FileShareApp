@@ -8,6 +8,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script src="../js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.$my = {
+            dlgCloseBtn: $('div.dlgCloseBtn')
+        };
+
+        $(document).ready(function () {
+            enableDlgCloseBtn();
+        });
+        function enableDlgCloseBtn() {
+            if ($my.dlgCloseBtn.css('visibility') === undefined) {
+                $my.dlgCloseBtn = $('div.dlgCloseBtn');
+            } else if ($my.dlgCloseBtn.css('visibility') !== 'visible') {
+                $my.dlgCloseBtn.css('visibility', 'visible');
+                return;
+            }
+            window.setTimeout(enableDlgCloseBtn, 333);
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
