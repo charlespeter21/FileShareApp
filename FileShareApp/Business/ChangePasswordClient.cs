@@ -12,6 +12,7 @@ namespace FileShareApp.Business
         private string _User_Name;
         private string _Current_Password;
         private string _New_Password;
+        private string _Email_Address;
 
         public String User_Name
         {
@@ -30,6 +31,13 @@ namespace FileShareApp.Business
             get { return _New_Password; }
             set { _New_Password = value; }
         }
+
+        public string Email_Address
+        {
+            get { return _Email_Address; }
+            set { _Email_Address = value; }
+        }
+
 
         public string Load_Password_By_Id(ChangePasswordClient client)
         {
@@ -60,13 +68,13 @@ namespace FileShareApp.Business
         {
             dbAccess db = new dbAccess();
             db.AddParameter("@Usernmae", client.User_Name);
-            return db.ExecuteScalar("SP_TBL_LOGIN_V2_LOAD_CURRENT_EMAIL_BY_ID").ToString();
+            return db.ExecuteScalar("SP_EmailidbyId").ToString();
         }
         public string Load_User_Current_Username_By_Id(ChangePasswordClient client)
         {
             dbAccess db = new dbAccess();
-            db.AddParameter("@Client_Id", client.User_Name);
-            return db.ExecuteScalar("SP_TBL_LOGIN_V2_LOAD_CURRENT_USERNAME_BY_ID").ToString();
+            db.AddParameter("@Usernmae", client.User_Name);
+            return db.ExecuteScalar("SP_UsernamebyId").ToString();
         }
         public DataSet Load_User_Password_By_Id(ChangePasswordClient client)
         {

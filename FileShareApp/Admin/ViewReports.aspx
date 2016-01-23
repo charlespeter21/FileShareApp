@@ -50,26 +50,26 @@
 
                           <div class="col-lg-3 col-md-4 col-sm-6">
 								<svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"/></svg><br />
-                                <span style="padding-left:35px;">
+                                <span style="padding-left:45px;">
 								 <asp:HyperLink ID="Lnklistfile" runat="server" ForeColor="Black" Font-Size="18px" NavigateUrl="~/Admin/ReportAllFiles.aspx" Target="_blank" >List Files</asp:HyperLink></span>
 							</div>
 								
                             
                             <div class="col-lg-3 col-md-4 col-sm-6">
 								<svg class="glyph stroked upload"><use xlink:href="#stroked-upload"/></svg><br />
-								<span style="text-align:center; padding-left:30px;">
+								<span style="text-align:center; padding-left:20px;">
                                <asp:HyperLink ID="LnkUpload" runat="server" ForeColor="Black" Font-Size="18px"  NavigateUrl="~/Admin/ReportUpload.aspx" Target="_blank">Upload History</asp:HyperLink></span>
 							</div>	
                             
                             <div class="col-lg-3 col-md-4 col-sm-6">
 								<svg class="glyph stroked download"><use xlink:href="#stroked-download"/></svg><br />
-								<span style="text-align:center; padding-left:30px;">
+								<span style="text-align:center; padding-left:10px;">
                                <asp:HyperLink ID="LnkDownload" runat="server" ForeColor="Black" Font-Size="18px" NavigateUrl="~/Admin/ReportDownload.aspx" Target="_blank">Download History</asp:HyperLink></span>
 							</div>	
                             
                            <div class="col-lg-3 col-md-4 col-sm-6" style="margin-left:-25px;">
 								<svg ><use xlink:href="#stroked-male-user"/></svg><br />
-								<span style="text-align:center; padding-left:80px;">
+								<span style="text-align:center; padding-left:110px;">
                                <asp:HyperLink ID="LnkUser" runat="server" ForeColor="Black"
                                 Font-Size="18px" NavigateUrl="~/Admin/ReportUser.aspx" Target="_blank">List Users</asp:HyperLink></span>
 							</div>							

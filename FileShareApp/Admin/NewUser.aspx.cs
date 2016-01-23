@@ -195,5 +195,10 @@ namespace FileShareApp.Admin
             return arrByte;
         }
 
+        protected void btnCancel_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("adminhome.aspx");
+        }
+
     }
 }

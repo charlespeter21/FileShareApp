@@ -11,7 +11,7 @@ namespace FileShareApp
     /// <summary>
     /// Summary description for FileDownloader
     /// </summary>
-    public class FileDownloader : IHttpHandler
+    public class FileDownloader : IHttpHandler,System.Web.SessionState.IRequiresSessionState
     {
         protected FileShareApp.Business.FileUpload obj = new FileShareApp.Business.FileUpload();
         public void ProcessRequest(HttpContext context)
@@ -22,7 +22,7 @@ namespace FileShareApp
             string file = context.Request.QueryString["file"];
             int id = Convert.ToInt32(context.Request.QueryString["id"]);
             obj.FileId = id;
-            obj.UserId = 1;
+            obj.UserId = Convert.ToInt32(context.Session["userId"]);
             string folder = "/uploads/";
             string fileWithFolder=folder+ file;
 

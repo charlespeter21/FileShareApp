@@ -18,8 +18,8 @@
             <li><a href="UploadFiles.aspx">
                 <svg class="glyph stroked upload"><use xlink:href="#stroked-upload"/></svg>
                 New Uploads</a></li>
-           <%--<li ><a href="ViewReports.aspx">
-           <svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Reports</a></li>--%>
+          <li><a href="ChangePasswordUser.aspx">
+           <svg class="glyph stroked lock"><use xlink:href="#stroked-lock"/></svg> Change Password</a></li>
             <li><a href="Logout.aspx">
                 <svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
                 Logout</a></li>

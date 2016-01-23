@@ -50,12 +50,14 @@ namespace FileShareApp.Admin
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        int id = Convert.ToInt32(dr[0].ToString());
-                        string Name = dr[1].ToString();
-                        string Pass = dr[2].ToString();
-                        int size = Convert.ToInt32(dr[4].ToString());
-                        string user = dr[3].ToString();
-                        htmlStr.Append("<tr><td class=" + "'align-center'" + ">" + id + "</td><td>" + Name + "</td><td>" + Pass + "</td><td>" + size + "</td><td>" + user + "</td><td><a href='../FileDownloader.ashx?file=" + Name + "&id=" + id + "' target='_blank' >Download</a></td></tr>");
+                        int rowno = Convert.ToInt32(dr[0].ToString());
+                        int id = Convert.ToInt32(dr[1].ToString());
+                        string Name = dr[2].ToString();
+                        string extension = dr[3].ToString();
+                        string user = dr[4].ToString();
+                        int size = Convert.ToInt32(dr[5].ToString());
+
+                        htmlStr.Append("<tr><td class=" + "'align-center'" + ">" + rowno + "</td><td>" + Name + "</td><td>" + extension + "</td><td>" + size + "</td><td>" + user + "</td><td><a href='../FileDownloader.ashx?file=" + Name + "&id=" + id + "' target='_blank' >Download</a></td></tr>");
                     }
                 }
             }

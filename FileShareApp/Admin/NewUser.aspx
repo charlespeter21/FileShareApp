@@ -493,7 +493,7 @@
                   />
           
                   <asp:ImageButton ID="btnCancel" runat="server" 
-                   ImageUrl="~/css-admin/Cancel.jpg" Width="80px" 
+                   ImageUrl="~/css-admin/Cancel.jpg" Width="80px" onclick="btnCancel_Click" 
                     />
            
               </td></tr>
