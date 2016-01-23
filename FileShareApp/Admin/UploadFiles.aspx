@@ -10,7 +10,7 @@
             <li ><a href="AdminHome.aspx">
                 <svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg>
                 Dashboard</a></li>
-            <li ><a href="ListFiles.aspx">
+            <li><a href="ListFiles.aspx">
                 <svg class="glyph stroked blank document"><use xlink:href="#stroked-blank-document"/></svg>
                 Files</a></li>
             <li class="active"><a href="UploadFiles.aspx">
@@ -18,6 +18,13 @@
                 New Uploads</a></li>
            <li ><a href="ViewReports.aspx">
            <svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Reports</a></li>
+
+            <li ><a href="NewUser.aspx">
+           <svg class="glyph stroked pen tip"><use xlink:href="#stroked-pen-tip"/></svg> New User</a></li>
+
+           <li><a href="ChangePassword.aspx">
+           <svg class="glyph stroked lock"><use xlink:href="#stroked-lock"/></svg> Change Password</a></li>
+
             <li><a href="Logout.aspx">
                 <svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
                 Logout</a></li>

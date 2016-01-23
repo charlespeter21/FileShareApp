@@ -172,7 +172,7 @@
 				<a class="navbar-brand" href="#"><span>Armed Forces Officers Club & Hotel</span>&nbsp; &nbsp;File Share Portal</a>
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> User <%--<span class="caret"></span>--%></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> <%= Session["user"]%> <%--<span class="caret"></span>--%></a>
 
 					</li>
 				</ul>

@@ -37,7 +37,7 @@ namespace FileShareApp
             string user;
             int userid;
             objUser.Username = txtLogin.Value;
-            objUser.Password = txtPassword.Value;
+            objUser.Password = DESEncrypt(txtPassword.Value);
             ds = objUser.Select_User_Password(objUser);
             dtUserExist = ds.Tables[0];
             if (dtUserExist.Rows[0][0].ToString() == "true")
@@ -83,7 +83,7 @@ namespace FileShareApp
 
             byte[] key;
             byte[] IV;
-
+           
             byte[] inputByteArray;
             try
             {
@@ -91,8 +91,10 @@ namespace FileShareApp
                 key = Convert2ByteArray(DESKey);
 
                 IV = Convert2ByteArray(DESIV);
-
-                int len = stringToDecrypt.Length; inputByteArray = Convert.FromBase64String(stringToDecrypt);
+                stringToDecrypt = stringToDecrypt.Replace(" ","+");
+                int len = stringToDecrypt.Length; 
+                inputByteArray=  Convert.FromBase64String(stringToDecrypt);
+                 
 
 
                 DESCryptoServiceProvider des = new DESCryptoServiceProvider();

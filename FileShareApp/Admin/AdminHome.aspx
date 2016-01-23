@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminHeader.Master" AutoEventWireup="true" CodeBehind="AdminHome.aspx.cs" Inherits="FileShareApp.Admin.AdminHome" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
- <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/chart.min.js"></script>
     <script type="text/javascript" src="../js/chart-data.js"></script>
@@ -46,6 +46,13 @@
                 New Uploads</a></li>
            <li ><a href="ViewReports.aspx">
            <svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Reports</a></li>
+
+            <li ><a href="NewUser.aspx">
+           <svg class="glyph stroked pen tip"><use xlink:href="#stroked-pen-tip"/></svg> New User</a></li>
+
+           <li ><a href="ChangePassword.aspx">
+           <svg class="glyph stroked lock"><use xlink:href="#stroked-lock"/></svg> Change Password</a></li>
+
             <li><a href="Logout.aspx">
                 <svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
                 Logout</a></li>
@@ -54,14 +61,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-        <%--<div class="row">
-            <ol class="breadcrumb">
-                <li><a href="#">
-                    <svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg>
-                </a></li>
-                <li class="active">Icons</li>
-            </ol>
-        </div>--%>
+       
         <!--/.row-->
         <div class="row" style="padding-top:20px; ">
             <div class="col-lg-12">
