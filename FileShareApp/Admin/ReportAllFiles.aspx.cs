@@ -38,7 +38,7 @@ namespace FileShareApp.Admin
 
             // Just set the name of data table
             dt.TableName = "UploadFile";
-            dt = objReports.GetFileReports(); //This function is located below this function
+            //dt = objReports.GetFileReports(); //This function is located below this function
 
             ds.Tables[0].Merge(dt);
 

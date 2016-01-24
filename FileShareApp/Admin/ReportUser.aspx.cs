@@ -40,7 +40,7 @@ namespace FileShareApp
 
             // Just set the name of data table
             dt.TableName = "Users";
-            dt = objReports.GetUserReports(); //This function is located below this function
+           // dt = objReports.GetUserReports(); //This function is located below this function
            
             ds.Tables[0].Merge(dt);
 
